@@ -4,15 +4,24 @@ const title = document.getElementById("siteName");
 const cta = document.getElementById("cta");
 const content = document.getElementById("content");
 
+const pagina = document.body;
+
 // ENTRY ANIMATION
 window.addEventListener("load", () => {
-  phone.classList.remove("opacity-0", "translate-y-10");
+  pagina.classList.remove("opacity-0", "-translate-y-10");
+  pagina.classList.add("opacity-100");
+  
+  setTimeout(() => {phone.classList.remove("opacity-0", "translate-y-10");
   phone.classList.add("opacity-100", "translate-y-0", "rotate-90");
-
+  }, 800);
   setTimeout(() => {
     title.classList.remove("opacity-0", "scale-0");
     title.classList.add("opacity-100", "scale-100");
-  }, 800);
+  }, 1200);
+  setTimeout(() => {
+    cta.classList.remove("opacity-0", "scale-0");
+    cta.classList.add("opacity-100", "scale-100");
+  }, 2200);
 });
 
 // SCROLL EFFECT

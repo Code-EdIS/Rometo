@@ -3,6 +3,8 @@ const phone = document.getElementById("smartphone");
 const title = document.getElementById("siteName");
 const cta = document.getElementById("cta");
 const content = document.getElementById("content");
+const tv = document.getElementById("smartTv");
+const motherboard = document.getElementById("motherboard");
 
 const pagina = document.body;
 
@@ -51,6 +53,10 @@ const observer = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       content.classList.remove("opacity-0", "translate-y-10");
       content.classList.add("opacity-100", "translate-y-0");
+      tv.classList.remove("opacity-0", "scale-0");
+      tv.classList.add("opacity-100", "scale-100");
+      motherboard.classList.remove("opacity-0", "scale-0");
+      motherboard.classList.add("opacity-100", "scale-100");
     }
   });
 });

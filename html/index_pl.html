@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rometo</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            spaceGrotesk: ['Space Grotesk', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-gradient-to-bl from-[#121211] to-[#1A1A1A] min-h-screen font-spaceGrotesk">
+
+  <!-- HEADER -->
+  <header class="flex items-center justify-between bg-[#2C2C2E] text-[#7EA2C4] h-12 w-full px-4">
+    <img src="../assets/rometo.png" class="w-12 h-auto">
+
+    <div class="flex items-center gap-2">
+      <i class="fa-solid fa-earth-europe"></i>
+      <button>EN</button>
+      <span>|</span>
+      <button>PL</button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PHONE SECTION -->
+    <section id="phoneSection" class="h-[200vh] relative">
+
+      <div class="sticky top-0 h-screen flex items-start justify-center pt-20">
+
+        <div class="flex flex-col items-center w-full">
+
+          <!-- SMARTPHONE -->
+          <div id="smartphone"
+            class="relative w-[85%] sm:w-[70%] md:w-[60%] lg:w-[50%] mx-auto
+                   opacity-0 translate-y-10 transition-all duration-1000 ease-out">
+
+            <!-- SCREEN -->
+            <div
+              class="absolute flex items-center justify-center inset-[5%_29%_5%_28%]
+                     bg-gradient-to-tl from-[#184E77] via-[#34A0A4] to-[#CBF3F0] rounded-[7%]">
+
+              <img id="siteName"
+                src="../assets/rometo.png"
+                class="-rotate-90 w-64 sm:w-72 md:w-80 opacity-0 scale-0 transition-all duration-1000 ease-out">
+
+            </div>
+
+            <!-- PHONE -->
+            <img src="../assets/Smartphone.png" class="relative w-full h-auto block">
+
+          </div>
+
+          <!-- CTA -->
+          <a href="#trigger" id="cta"
+            class="mt-8 px-6 py-3 bg-[#B2C9C6] text-[#121211] font-semibold rounded-lg transition-all duration-300">
+            Discover our products
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- TRIGGER -->
+    <div id="trigger" class="h-[1px]"></div>
+
+    <!-- CONTENT -->
+    <section id="content"
+      class="opacity-0 translate-y-10 transition-all duration-700 text-[#7EA2C4] px-10 py-20 space-y-20">
+
+      <div>
+        <h2 class="text-4xl font-bold mb-4">Home Appliances</h2>
+        <p>
+          Discover a wide selection of reliable home appliances from trusted brands.
+          Rometo helps you upgrade your home with quality and performance.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-4xl font-bold mb-4">Electronics</h2>
+        <p>
+          Stay connected with modern electronics designed for everyday life.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-4xl font-bold mb-4">Business Software</h2>
+        <p>
+          Smart software solutions for companies of every size.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="../main.js"></script>
+</body>
+
+</html>

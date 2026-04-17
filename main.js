@@ -3,6 +3,8 @@ const phone = document.getElementById("smartphone");
 const title = document.getElementById("siteName");
 const cta = document.getElementById("cta");
 const content = document.getElementById("content");
+const testo = document.querySelectorAll(".testo");
+const immagini = document.querySelectorAll(".immagine");
 const tv = document.getElementById("smartTv");
 const motherboard = document.getElementById("motherboard");
 
@@ -26,17 +28,20 @@ window.addEventListener("load", () => {
   }, 2200);
 });
 
-// SCROLL EFFECT
+
+  // SCROLL EFFECT
 window.addEventListener("scroll", () => {
+
   const rect = phoneSection.getBoundingClientRect();
 
-  const progress = Math.min(
+const progress = Math.min(
     Math.max(-rect.top / rect.height, 0),
     1
   );
-
+  
+const scale = 1 - progress * 0.15;
+  
   // PHONE SCALE
-  const scale = 1 - progress * 0.15;
   phone.style.transform = `translateY(0) scale(${scale}) rotate(90deg)`;
 
   // CTA FADE
@@ -45,20 +50,45 @@ window.addEventListener("scroll", () => {
 
   // TITLE FADE
   title.style.opacity = 1 - progress * 0.8;
+
 });
 
-// CONTENT APPEAR
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      content.classList.remove("opacity-0", "translate-y-10");
-      content.classList.add("opacity-100", "translate-y-0");
-      tv.classList.remove("opacity-0", "scale-0");
-      tv.classList.add("opacity-100", "scale-100");
-      motherboard.classList.remove("opacity-0", "scale-0");
-      motherboard.classList.add("opacity-100", "scale-100");
+const contentObs = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if(entry.isIntersecting){
+
+      const delay = entry.target.dataset.index * 150;
+      
+      setTimeout(() => {
+        entry.target.classList.remove("opacity-0", "translate-y-10");
+        entry.target.classList.add("opacity-100", "translate-y-0");
+      }, delay);
+
+      contentObs.unobserve(entry.target);
     }
   });
+}, {
+  threshold: 0.2
 });
 
-observer.observe(document.getElementById("trigger"));
+const imgObs = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if(entry.isIntersecting){
+
+      const delay = entry.target.dataset.index * 150;
+      
+      setTimeout(() => {
+        entry.target.classList.remove("opacity-0", "translate-x-[10rem]");
+        entry.target.classList.add("opacity-100", "translate-x-0");
+      }, delay);
+
+      imgObs.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.2
+});
+
+testo.forEach(el => contentObs.observe(el));
+
+immagini.forEach(el => imgObs.observe(el));

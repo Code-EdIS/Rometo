@@ -35,7 +35,21 @@
   </script>
 </head>
 
-<body class="bg-gradient-to-bl from-[#121211] to-[#1A1A1A] min-h-screen font-spaceGrotesk opacity-0 -translate-y-10 transition-all duration-1000">
+<body class="bg-gradient-to-br from-[#121211] via-[#1A1A1A] to-[#1f2f3a] min-h-full font-spaceGrotesk opacity-0 -translate-y-10 transition-all duration-1000">
+  
+<div class="fixed inset-0 -z-10 pointer-events-none">
+
+  <!-- layer 1: dots grandi -->
+  <div class="absolute inset-0 opacity-[0.05]
+       bg-[radial-gradient(#7EA2C4_1.5px,transparent_1.5px)]
+       [background-size:40px_40px]"></div>
+
+  <!-- layer 2: dots piccoli offset -->
+  <div class="absolute inset-0 opacity-[0.03] translate-x-3 translate-y-3
+       bg-[radial-gradient(#50757B_1px,transparent_1px)]
+       [background-size:24px_24px]"></div>
+
+</div>
 
   <!-- HEADER -->
   <header class="flex items-center justify-between bg-[#2C2C2E] text-[#7EA2C4] h-12 w-full px-4">
@@ -96,37 +110,46 @@
 
     <!-- CONTENT -->
     <section id="content"
-      class="opacity-0 translate-y-10 transition-all duration-700 text-[#7EA2C4] px-10 py-20 space-y-20">
+      class="text-[#7EA2C4] px-10 py-20 space-y-20">
 
-      <div class="h-screen lg:max-w-[50%] mx-auto">
-        <h2 class="text-4xl font-bold mb-4">The Right Appliances for Every Home</h2>
-        <p>
-          At Rometo, we offer a carefully selected range of home appliances designed to meet the needs of modern households. From kitchen essentials to everyday home solutions, we provide products that combine reliability, efficiency, and ease of use.We work with trusted brands to ensure that every appliance we offer meets high standards of quality and performance—so you can choose with confidence and enjoy long-lasting results.
-        </p>
-        <img src="../assets/smatTv.png" alt="smartTv" id="smartTv" class="opacity-0 scale-0 max-w-[50%] mx-auto transition-all duration-300">
+      <div class="testo opacity-0 translate-y-10 h-screen mx-auto transition-all duration-1000">
+        <h2 class="text-4xl font-bold mb-4 text-center">The Right Appliances for Every Home</h2>
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+        <p class="lg:max-w-[50%]">At Rometo, we offer a carefully selected range of home appliances designed to meet the needs of modern households. 
+           From kitchen essentials to everyday home solutions, we provide products that combine reliability, efficiency, and ease of use. 
+           We work with trusted brands to ensure that every appliance we offer meets high standards of quality and performance—so you 
+           can choose with confidence and enjoy long-lasting results.</p>
+        <img src="../assets/smatTv.png" alt="smartTv" id="smartTv" class="immagine opacity-0 translate-x-[10rem] overflow-x-hidden max-w-[50%] lg:max-w-[25%] transition-all duration-1000">
+        </div>
       </div>
 
-      <div class="h-screen lg:max-w-[50%] mx-auto">
-        <h2 class="text-4xl font-bold mb-4">Selected for Quality and Performance</h2>
-        <p>
-          Choosing the right product shouldn’t be complicated. That’s why we focus on offering only well-tested and reliable solutions. Every item in our catalog is selected based on quality, functionality, and value.Our goal is to simplify your decision-making process by providing products that deliver exactly what you expect—without compromise.
-        </p>
+      <div class="testo opacity-0 translate-y-10 h-screen mx-auto transition-all duration-1000">
+        <h2 class="text-4xl font-bold mb-4 text-center">Selected for Quality and Performance</h2>
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+          <img src="../assets/lavatrice.png" alt="lavatrice" id="lavatrice" class="immagine opacity-0 translate-x-[10rem] overflow-x-hidden max-w-[50%] lg:max-w-[25%]  transition-all duration-1000">
+          <p class="lg:max-w-[50%]">Choosing the right product shouldn’t be complicated. That’s why we focus on offering only well-tested and reliable solutions. 
+          Every item in our catalog is selected based on quality, functionality, and value. 
+          Our goal is to simplify your decision-making process by providing products that deliver exactly what you expect—without compromise.</p>
+      </div>
       </div>
 
-      <div class="h-screen lg:max-w-[50%] mx-auto">
-        <h2 class="text-4xl font-bold mb-4">Electronics That Keep You Connected</h2>
-        <p>
-          Beyond home appliances, Rometo provides a range of electronic devices designed to support your daily activities. From essential gadgets to practical tech solutions, we help you stay connected, productive, and up to date.We bring together convenience and technology to match the pace of modern life.
-        </p>
-        
-        <img src="../assets/motherboard.png" alt="smartTv" id="motherboard" class="opacity-0 scale-0 max-w-[50%] mx-auto transition-all duration-300">
+      <div class="testo opacity-0 translate-y-10 h-screen mx-auto transition-all duration-1000">
+       <h2 class="text-4xl font-bold mb-4 text-center">Electronics That Keep You Connected</h2>
+       <div class="flex flex-col lg:flex-row items-center justify-between">
+        <p class="lg:max-w-[50%]">Beyond home appliances, Rometo provides a range of electronic devices designed to support your daily activities. 
+           From essential gadgets to practical tech solutions, we help you stay connected, productive, and up to date. 
+           We bring together convenience and technology to match the pace of modern life.</p>
+        <img src="../assets/motherboard.png" alt="schedaMadre" id="motherboard" class="immagine opacity-0 translate-x-[10rem] overflow-x-hidden max-w-[50%] lg:max-w-[25%]  transition-all duration-1000">
+      </div>
       </div>
       
-      <div class="h-screen lg:max-w-[50%] mx-auto">
-        <h2 class="text-4xl font-bold mb-4">Smart Tools for Business Efficiency</h2>
-        <p>
-          Rometo also offers software solutions tailored to support businesses of all sizes. Our tools are designed to improve workflow, optimize operations, and enhance overall efficiency. Whether you're running a small company or managing a growing organization, we provide solutions that adapt to your business needs.
-        </p>
+      <div class="testo opacity-0 translate-y-10 h-screen mx-auto transition-all duration-1000">
+       <h2 class="text-4xl font-bold mb-4 text-center">Smart Tools for Business Efficiency</h2>
+       <div class="flex flex-col lg:flex-row items-center justify-between">
+         <img src="../assets/cloud.png" alt="software" id="cloud" class="immagine opacity-0 translate-x-[10rem] overflow-x-hidden max-w-[50%] lg:max-w-[25%]  transition-all duration-1000">
+        <p class="lg:max-w-[50%]">Rometo also offers software solutions tailored to support businesses of all sizes. Our tools are designed to improve workflow, optimize operations, 
+           and enhance overall efficiency. Whether you're running a small company or managing a growing organization, we provide solutions that adapt to your business needs.</p>
+        </div>
       </div>
 
     </section>

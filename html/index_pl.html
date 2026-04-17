@@ -35,7 +35,21 @@
   </script>
 </head>
 
-<body class="bg-gradient-to-bl from-[#121211] to-[#1A1A1A] min-h-screen font-spaceGrotesk opacity-0 -translate-y-10 transition-all duration-1000">
+<body class="bg-gradient-to-br from-[#121211] via-[#1A1A1A] to-[#1f2f3a] min-h-full font-spaceGrotesk opacity-0 -translate-y-10 transition-all duration-1000">
+  
+  <div class="fixed inset-0 -z-10 pointer-events-none">
+
+  <!-- layer 1: dots grandi -->
+  <div class="absolute inset-0 opacity-[0.05]
+       bg-[radial-gradient(#7EA2C4_1.5px,transparent_1.5px)]
+       [background-size:40px_40px]"></div>
+
+  <!-- layer 2: dots piccoli offset -->
+  <div class="absolute inset-0 opacity-[0.03] translate-x-3 translate-y-3
+       bg-[radial-gradient(#50757B_1px,transparent_1px)]
+       [background-size:24px_24px]"></div>
+
+</div>
 
   <!-- HEADER -->
   <header class="flex items-center justify-between bg-[#2C2C2E] text-[#7EA2C4] h-12 w-full px-4">
@@ -52,7 +66,7 @@
   <main>
 
     <!-- PHONE SECTION -->
-    <section id="phoneSection" class="h-[200vh] relative">
+    <section id="phoneSection" class="h-[100vh] relative">
 
       <div class="flex flex-col items-center w-full -translate-y-6 md:-translate-y-10 lg:-translate-y-16">
 
@@ -96,35 +110,36 @@
 
     <!-- CONTENT -->
     <section id="content"
-      class="opacity-0 translate-y-10 transition-all duration-700 text-[#7EA2C4] px-10 py-20 space-y-20">
+      class="text-[#7EA2C4] px-10 py-20 space-y-20">
 
-      <div class="h-screen lg:max-w-[50%] mx-auto">
-  <h2 class="text-4xl font-bold mb-4">Odpowiednie urządzenia dla każdego domu</h2>
-  <p>
-    W Rometo oferujemy starannie wyselekcjonowaną gamę sprzętów AGD zaprojektowanych z myślą o potrzebach nowoczesnych gospodarstw domowych. Od podstawowych urządzeń kuchennych po codzienne rozwiązania domowe — dostarczamy produkty, które łączą niezawodność, wydajność i łatwość użytkowania. Współpracujemy z zaufanymi markami, aby każdy oferowany przez nas sprzęt spełniał wysokie standardy jakości i wydajności — dzięki czemu możesz wybierać z pełnym zaufaniem i cieszyć się długotrwałymi efektami.
+      <div class="testo opacity-0 translate-y-10 h-screen mx-auto transition-all duration-1000">
+  <h2 class="text-4xl font-bold mb-4 text-center">Odpowiednie urządzenia dla każdego domu</h2>
+  <div class="flex flex-col lg:flex-row items-center justify-between">
+  <p class="lg:max-w-[50%]">
+    W Rometo oferujemy starannie wyselekcjonowaną gamę sprzętów AGD zaprojektowanych z myślą o potrzebach nowoczesnych gospodarstw domowych. Od podstawowych urządzeń kuchennych po codzienne rozwiązania domowe — dostarczamy produkty, które łączą niezawodność, wydajność i łatwość użytkowania. Współpracujemy z zaufanymi markami, aby każdy oferowany przez nas sprzęt spełniał wysokie standardy jakości i wydajności — dzięki czemu możesz wybierać z pełnym zaufaniem i cieszyć się długotrwałymi efektami.</p>
     
-            <img src="../assets/smatTv.png" alt="smartTv" id="smartTv" class="opacity-0 scale-0 max-w-[50%] mx-auto transition-all duration-300">
-  </p>
+    <img src="../assets/smatTv.png" alt="smartTv" id="smartTv" class="immagine opacity-0 translate-x-[10rem] overflow-x-hidden max-w-[50%] lg:max-w-[25%] transition-all duration-1000">
+  </div>
 </div>
 
-<div class="h-screen lg:max-w-[50%] mx-auto">
-  <h2 class="text-4xl font-bold mb-4">Wyselekcjonowane pod kątem jakości i wydajności</h2>
-  <p>
-    Wybór odpowiedniego produktu nie powinien być skomplikowany. Dlatego oferujemy wyłącznie sprawdzone i niezawodne rozwiązania. Każdy produkt w naszym katalogu jest wybierany na podstawie jakości, funkcjonalności i wartości. Naszym celem jest uproszczenie procesu decyzyjnego poprzez dostarczanie produktów, które spełniają dokładnie Twoje oczekiwania — bez kompromisów.
-  </p>
+<div class="testo opacity-0 translate-y-10 h-screen mx-auto transition-all duration-1000">
+  <h2 class="text-4xl font-bold mb-4 text-center">Wyselekcjonowane pod kątem jakości i wydajności</h2>
+  <div class="flex flex-col lg:flex-row items-center justify-between">
+    <img src="../assets/lavatrice.png" alt="lavatrice" id="lavatrice" class="immagine opacity-0 translate-x-[10rem] overflow-x-hidden max-w-[50%] lg:max-w-[25%]  transition-all duration-1000">
+    <p class="lg:max-w-[50%]">Wybór odpowiedniego produktu nie powinien być skomplikowany. Dlatego oferujemy wyłącznie sprawdzone i niezawodne rozwiązania. Każdy produkt w naszym katalogu jest wybierany na podstawie jakości, funkcjonalności i wartości. Naszym celem jest uproszczenie procesu decyzyjnego poprzez dostarczanie produktów, które spełniają dokładnie Twoje oczekiwania — bez kompromisów.</p>
+  </div>
 </div>
 
-<div class="h-screen lg:max-w-[50%] mx-auto">
-  <h2 class="text-4xl font-bold mb-4">Elektronika, która pozwala Ci pozostać w kontakcie</h2>
+<div class="testo opacity-0 translate-y-10 h-screen mx-auto transition-all duration-1000">
+  <h2 class="text-4xl font-bold mb-4 text-center">Elektronika, która pozwala Ci pozostać w kontakcie</h2>
   <p>
-    Oprócz sprzętów AGD Rometo oferuje szeroką gamę urządzeń elektronicznych zaprojektowanych do wspierania codziennych aktywności. Od podstawowych gadżetów po praktyczne rozwiązania technologiczne — pomagamy Ci pozostać w kontakcie, być produktywnym i zawsze na bieżąco. Łączymy wygodę i technologię, aby nadążyć za tempem współczesnego życia.
+    Oprócz sprzętów AGD Rometo oferuje szeroką gamę urządzeń elektronicznych zaprojektowanych do wspierania codziennych aktywności. Od podstawowych gadżetów po praktyczne rozwiązania technologiczne — pomagamy Ci pozostać w kontakcie, być produktywnym i zawsze na bieżąco. Łączymy wygodę i technologię, aby nadążyć za tempem współczesnego życia.</p>
     
-            <img src="../assets/motherboard.png" alt="motherboard" id="motherboard" class="opacity-0 scale-0 max-w-[50%] mx-auto transition-all duration-300">
-  </p>
+    <img src="../assets/motherboard.png" alt="motherboard" id="motherboard" class="opacity-0 scale-0 max-w-[50%] mx-auto transition-all duration-300">
 </div>
 
-<div class="h-screen lg:max-w-[50%] mx-auto">
-  <h2 class="text-4xl font-bold mb-4">Inteligentne narzędzia dla efektywności biznesu</h2>
+<div class="testo opacity-0 translate-y-10 h-screen mx-auto transition-all duration-1000">
+  <h2 class="text-4xl font-bold mb-4 text-center">Inteligentne narzędzia dla efektywności biznesu</h2>
   <p>
     Rometo oferuje również rozwiązania programistyczne dostosowane do wsparcia firm każdej wielkości. Nasze narzędzia zostały zaprojektowane tak, aby usprawniać przepływ pracy, optymalizować operacje i zwiększać ogólną wydajność. Niezależnie od tego, czy prowadzisz małą firmę, czy zarządzasz rozwijającą się organizacją — dostarczamy rozwiązania dopasowane do Twoich potrzeb biznesowych.
   </p>
